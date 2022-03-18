@@ -95,7 +95,7 @@ li.nav-item:hover::after{
 }
  
 .carousel-item{
-  height: 45em;
+  height: 40em;
   position: relative;
   color: white;
   background-color:#0a0a0a;

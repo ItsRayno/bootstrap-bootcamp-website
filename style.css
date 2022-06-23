@@ -1,14 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 
 body {
-  padding-top: 50px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(201, 201, 201);
+  font-family: 'Montserrat', sans-serif;
 }
 
-#zwei{
-  background-color: rgb(238, 56, 56) !important;
+
+.btn:hover{
+  background-color: rgba(252, 135, 135, 0.973);
 }
 
+.btn{
+  background-color: rgba(255, 59, 59, 0.973);
+  border: rgb(255, 59, 59, 0.973);
+}
+
+
+#first-section{
+  background-color:rgb(255, 255, 255);
+}
+
+#second-section{
+  color: rgb(255, 44, 44) !important;
+  background-color:rgb(255, 255, 255)!important
+}
+
+#second-section p{
+  color: rgb(85, 85, 85) !important;
+}
+
+#third-section{
+  background-color:rgb(255, 255, 255)!important
+}
 .img-fluid{
   box-shadow: 0 20px 30px 0 rgb(0,0,0,.2);
 }
@@ -26,10 +51,10 @@ body {
   color:rgb(115, 110, 110) !important;
 }
 
-
-.navbar a{
-  font-family: 'Open Sans', sans-serif !important;
+.navbar{
+  height: 100px;
 }
+
 
 .navbar .nav-item{
   margin-left: 45px;
@@ -38,43 +63,52 @@ body {
 .navbar .nav-item .nav-link{
   padding: 5px 0;
   position: relative;
+  color: rgb(61, 61, 61);
 }
 
 ul li {
   position: relative;
+  content: "";
   text-align: center
 }
 
+li.active.nav-item .nav-link{
+color: rgb(255, 0, 0) !important;
 
-li.active::after{
+}
+
+.nav-link:hover{ 
+  color: rgb(255, 0, 0) !important;
+}
+
+li.active.nav-item::after{
   position:absolute;
   content: "";
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: red !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  border-top-left-radius: 2px ;
+  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   animation: appear 0.2s linear;
 }
-
-
 
 li.nav-item:hover::after{
   position:absolute;
   content: "";
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: red !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  border-top-left-radius: 2px ;
+  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   animation: appear 0.2s linear;
 }
+ 
 
 @keyframes appear {
   from{
@@ -86,23 +120,36 @@ li.nav-item:hover::after{
 }
 
 
-.carousel-caption{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-bottom: 300px;
-}
- 
 .carousel-item{
-  height: 40em;
+  height: 35em;
   position: relative;
-  color: white;
-  background-color:#0a0a0a;
+  color: rgb(255, 255, 255);
+  background-color:#1a1a1a;
   background-size: cover;
+  }
 
+  .carousel-caption{
+    background-color:rgba(185, 22, 22, 0.432);
+    color: rgb(245, 10, 10);
+    position: absolute;
+    bottom: 150px;
+    left: 650px;
+    right: 650px;
+    transition: opacity 1.5 ease-out;
   }
  
+
+  .carousel-fade .carousel-item {
+    transition: opacity 1.5s ease-out;
+  }
+
+  .carousel-fade .carousel-item.active {
+    transition: opacity 1s ease-in;
+  }
+
+
+
+
 .overlay-image{
   position: absolute;
   top: 0;
@@ -114,3 +161,93 @@ li.nav-item:hover::after{
   opacity: 0.8;
 }
 
+
+
+
+.card-img-top{
+  height: 250px;
+}
+
+.card-title{
+  color: rgb(255, 59, 59, 0.973);
+}
+
+.cardbox{
+  justify-content:center;
+  display: flex; 
+}
+
+
+.card {
+  width: 400px;
+  margin: 20px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  border: rgb(223, 30, 30);
+  border-radius:0px;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: #ffffff;
+}
+
+.card:hover .card-overlay{
+  opacity: 0.3;
+}
+
+.footer-wrapper {
+  justify-content:center;
+  display: flex;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .cardbox{
+    justify-content:center;
+    display: table;
+  }
+  .card{
+    justify-content:center;
+    display: flex; 
+  }
+
+}
+
+
+
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+} 
+
+
+
+@media only screen and (max-width: 900px) {
+  .carousel-caption{
+    position: absolute;
+    bottom: 300px;
+    left: 0px;
+    right: 0px;
+  }
+
+  .navbar{
+    height: auto;
+  }
+
+  .carousel-item{
+    height: 40em;
+    position: relative;
+    color: rgb(0, 0, 0);
+    background-color:#0a0a0a;
+    background-size: cover;
+    }
+} 

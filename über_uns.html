@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_über_uns.css" />
+   
+    <title>Frontend Bootcamp</title>
+  </head>
+
+  <body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff;">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./img/Logo.png" alt="">
+        </a>
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              KOMPETENZEN
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Digitalisierung</a></li>
+                <li><a class="dropdown-item" href="#">Kanalisation</a></li>
+              </ul>
+            </li>
+            <li class="active nav-item">
+              <a href="./über_uns.html" class="nav-link">ÜBER UNS</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">PROJEKTE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="titel"> 
+      <h1>HELLO</h1>
+    </div>
+
+
+
+
+
+  <footer>
+    <div class=" container-fluid">
+       
+      <div class="footer-wrapper row p-5 text-white" style="background-color: rgb(233, 73, 73);">
+      
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <p class="h3">Kontakt</p>
+          <div class="mb-2">
+            <p class="text-white text-decoration-none" href="#">Cobf Bauzeichnerfirma <br>Unterdorf 5 <br>Benzenschwil 5636<br>Tel: 078 849 23 03</p>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <p class="h2 mb-3">Impressum</p>
+          <div class="mb-2">
+            <a class="text-white text-decoration-none" href="#">Impressum / Datenschutz</a>
+          </div>  
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+    <script>
+      const items = document.querySelectorAll("ul li");
+      items.forEach((item) => {
+        item.addEventListener("click",() => {
+          document.querySelector("li.active").classList.remove("active");
+          item.classList.add("active");
+        });
+      });
+    </script>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

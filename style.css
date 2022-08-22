@@ -17,8 +17,8 @@ body {
   border: rgb(255, 59, 59, 0.973);
 }
 
-
 #first-section{
+  padding-bottom: 100px;
   background-color:rgb(255, 255, 255);
 }
 
@@ -53,8 +53,9 @@ body {
 
 .navbar{
   height: 100px;
-}
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
 
+}
 
 .navbar .nav-item{
   margin-left: 45px;
@@ -90,8 +91,6 @@ li.active.nav-item::after{
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
   animation: appear 0.2s linear;
 }
 
@@ -104,8 +103,6 @@ li.nav-item:hover::after{
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
   animation: appear 0.2s linear;
 }
  
@@ -206,8 +203,19 @@ li.nav-item:hover::after{
 .footer-wrapper {
   justify-content:center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  background-color: rgb(233, 73, 73);
 }
 
+.test-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: rgb(255, 255, 255);
+}
 
 @media only screen and (max-width: 900px) {
   .cardbox{

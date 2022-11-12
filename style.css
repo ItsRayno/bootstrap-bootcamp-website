@@ -3,7 +3,7 @@
 
 
 body {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -17,13 +17,34 @@ body {
   border: rgb(255, 59, 59, 0.973);
 }
 
+.section1{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  width: 100%;
+  margin: 8rem auto 0 auto;
+}
+
+.section1-img{
+  float: left;
+}
+
+.section1-text{
+  float: left;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  font-size: 1.5em; 
+
+}
+
 #first-section{
   padding-bottom: 100px;
   background-color:rgb(255, 255, 255);
 }
 
 #second-section{
-  color: rgb(255, 44, 44) !important;
+  color: rgb(44, 44, 44) !important;
   background-color:rgb(255, 255, 255)!important
 }
 
@@ -118,18 +139,17 @@ li.nav-item:hover::after{
 
 
 .carousel-item{
-  height: 35em;
+  height: 60em;
   position: relative;
-  color: rgb(255, 255, 255);
-  background-color:#1a1a1a;
+  color: rgb(0, 0, 0);
+  background-color:#000000;
   background-size: cover;
   }
 
   .carousel-caption{
-    background-color:rgba(185, 22, 22, 0.432);
-    color: rgb(245, 10, 10);
+    background-color:rgba(88, 88, 88, 0.322);
     position: absolute;
-    bottom: 150px;
+    bottom: 250px;
     left: 650px;
     right: 650px;
     transition: opacity 1.5 ease-out;
@@ -159,7 +179,10 @@ li.nav-item:hover::after{
 }
 
 
-
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
 
 .card-img-top{
   height: 250px;
@@ -209,9 +232,19 @@ li.nav-item:hover::after{
   background-color: rgb(233, 73, 73);
 }
 
+.container{
+}
+
 .test-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.cards {
+  display: flex;
   justify-content: center;
 
   background-color: rgb(255, 255, 255);
